@@ -1,67 +1,54 @@
 package com.dollarsbank.model;
 
-public class Customer {
+	public class Customer {
+		private String name;
+		private String address;
+		private String contact_number;
+		private String user_id;
+		
+		
+		public Customer() {
+		}
 
-	private String customerName = "bob";
-	private String customerAddress;
-	private int customerNumber;
-	private String userId;
-	private String customerPassword;
-	private double customerDeposit;
-	
-	public Customer(String customerName, String customerAddress, int customerNumber, String userId,
-			String customerPassword, double customerDeposit) {
-		super();
-		this.customerName = customerName;
-		this.customerAddress = customerAddress;
-		this.customerNumber = customerNumber;
-		this.userId = userId;
-		this.customerPassword = customerPassword;
-		this.customerDeposit = customerDeposit;
+		public Customer(String name, String address, String contact_number, String user_id) {
+			super();
+			this.name = name;
+			this.address = address;
+			this.contact_number = contact_number;
+			this.user_id = user_id;
+		}
+		
+		public String getName() {
+			return name;
+		}
+		public void setName(String name) {
+			this.name = name;
+		}
+		public String getAddress() {
+			return address;
+		}
+		public void setAddress(String address) {
+			this.address = address;
+		}
+		public String getContact_number() {
+			return contact_number;
+		}
+		public void setContact_number(String contact_number) {
+			this.contact_number = contact_number;
+		}
+		public String getUser_id() {
+			return user_id;
+		}
+		public void setUser_id(String user_id) {
+			this.user_id = user_id;
+		}
+
+		@Override
+		public String toString() {
+			return "Name = " + name + "\nAddress = " + address + "\nContact_number = " + contact_number + "\nUser Id = "
+					+ user_id;
+		}
+		
+		
+		
 	}
-	
-	public String getCustomerName() {
-		return customerName;
-	}
-	public void setCustomerName(String customerName) {
-		this.customerName = customerName;
-	}
-	public String getCustomerAddress() {
-		return customerAddress;
-	}
-	public void setCustomerAddress(String customerAddress) {
-		this.customerAddress = customerAddress;
-	}
-	public int getCustomerNumber() {
-		return customerNumber;
-	}
-	public void setCustomerNumber(int customerNumber) {
-		this.customerNumber = customerNumber;
-	}
-	public String getUserId() {
-		return userId;
-	}
-	public void setUserId(String userId) {
-		this.userId = userId;
-	}
-	public String getCustomerPassword() {
-		return customerPassword;
-	}
-	public void setCustomerPassword(String customerPassword) {
-		this.customerPassword = customerPassword;
-	}
-	public double getCustomerDeposit() {
-		return customerDeposit;
-	}
-	public void setCustomerDeposit(double customerDeposit) {
-		this.customerDeposit = customerDeposit;
-	}
-	
-	@Override
-	public String toString() {
-		return "Account [customerName=" + customerName + ", customerAddress=" + customerAddress + ", customerNumber="
-				+ customerNumber + ", userId=" + userId + ", customerPassword=" + customerPassword
-				+ ", customerDeposit=" + customerDeposit + "]";
-	}
-	
-}
